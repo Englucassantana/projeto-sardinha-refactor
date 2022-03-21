@@ -1,0 +1,25 @@
+.header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 36px;
+}
+
+.heading1{
+  font-family: 'Fondamento', cursive;
+  font-size: 48px;
+}
+
+.material-icons{
+  font-family: 'Material Icons';
+  font-size: 36px;
+  background-color: var(--second-color);
+  border-radius: 100%;
+  text-align: center;
+  padding: 18px 0;
+  box-sizing: border-box;
+  width: 72px;
+  height: 72px;
+  color: white;
+}

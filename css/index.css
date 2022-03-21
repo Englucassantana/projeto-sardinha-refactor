@@ -1,0 +1,121 @@
+:root{
+  --main-color: #0277BD;
+  --main-color-derivation: #01579B;
+  --second-color: #FFA000;
+  --second-color-weak:#FFECB3;
+  --font-color: #455A64;
+  --background-color-1:#F5F5F5;
+  --background-color-2:#E0E0E0;
+  --background-color-3:#EEEEEE;
+  --background-color-4:#9E9E9E;
+}
+
+html{
+  font-family: 'Quicksand';
+  background-color: var(--background-color-1);
+  color: var(--font-color);
+}
+
+a{
+  text-decoration: none;
+  color: var(--font-color);
+}
+
+input[type="text"], input[type="number"]{
+  border:0;
+  border-bottom: 1px var(--background-color-2) solid;
+  background-color: var(--background-color-1);
+}
+
+input[type="text"]:hover, input[type="number"]:hover{
+  outline: 1px solid var(--background-color-2);
+}
+
+input[type="text"]:focus, input[type="number"]:focus{
+  outline: 1px solid var(--main-color);
+}
+
+input[type="button"]{
+  cursor: pointer;
+  background-color: var(--main-color);
+  font-family: 'Quicksand';
+  padding: 6px 0px;
+  margin-bottom: 6px;
+  color: white;
+  border: 0;
+  width: 100%;
+  border-bottom: 2px var(--main-color-derivation) solid;
+  border-right: 2px var(--main-color-derivation) solid;
+  border-style: outset;
+}
+
+input[type="button"]:hover{
+  font-weight: 600;
+  outline: 1px var(--main-color-derivation) solid;
+}
+
+input[type="button"]:active{
+  font-weight: 500;
+  border-style: inset;
+  outline: 0;
+}
+
+legend{
+  font-weight: 600;
+}
+
+body{
+  width: 648px;
+  margin:36px auto;
+  box-sizing: border-box;
+}
+
+
+.archive-file{
+  background-color: var(--background-color-2);
+  padding: 18px;
+  box-sizing: border-box;
+}
+
+.files{
+  background-color: var(--background-color-3);
+  padding: 18px;
+  max-height: 540px;
+  overflow-y:scroll;
+  box-shadow: 3px 3px 6px black;
+}
+
+.files::-webkit-scrollbar{
+  width: 6px;
+
+}
+
+.files::-webkit-scrollbar-thumb{
+  background-color: var(--main-color);
+}
+
+.item-box{
+  padding-bottom: 18px;
+}
+
+.item{
+  padding-bottom: 6px;
+}
+
+.tab-panel{
+  display: none;
+}
+
+.tab-panel.active{
+  display: block;
+}
+
+#input-value-box{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#maximum-input-value-box{
+  text-align: right;
+}

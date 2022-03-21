@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projeto Sardinha</title>
+  <link rel="stylesheet" href="./css/normalize.css"/>
+  <link href="./css/reset.css" type="text/css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="./css/index.css" type="text/css" rel="stylesheet"/>
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/tab-list.css">
+  <link rel="stylesheet" href="./css/alvo.css">
+  <link rel="stylesheet" href="./css/single-item.css">
+  <link rel="stylesheet" href="./css/jquery-ui/jquery-ui.css">
+  <link rel="stylesheet" href="./css/jquery-ui/jquery-ui.structure.css">
+  <link rel="stylesheet" href="./css/jquery-ui/jquery-ui.theme.css">
+</head>
+<body>
+  <header class="header">
+    <h1 class="heading1">Projeto Sardinha</h1>
+    <span class="material-icons md-light amber700">logout</span>
+  </header>
+  <main>
+    <div class="archive">
+      <ul class="tab-list">
+        <li class="tab active"><a class="tab-control" href = "#tab-1">Simples</a></li>
+        <li class="tab"><a class="tab-control" href = "#tab-2">Swing</a></li>
+        <li class="tab"><a class="tab-control" href = "#tab-3">Edição</a></li>
+      </ul>
+      <div class="archive-file">
+        <div class="files">
+          <div class="tab-panel active" id="tab-1">
+            <form action="submit">
+              <div id="pair-box" class="item-box">
+                <label class="single-label" for="pair-input">Pair</label>
+                <input class="single-input" id='pair-input' type="text" placeholder="BTCUSDT">
+              </div>
+              <div id="interval-input" class="item-box">
+                <fieldset id="interval-group">
+                  <legend class="item heading-item-group">Intervalo de entrada</legend>
+                  <input class="item" type="button" value="Carregar Entradas">
+                  <div class="item" id="input-value-box">
+                    <div id="minimum-input-value-box">
+                      <label for="minimum-input-value">Valor mínimo de Entrada</label>
+                      <input type="number" name="minimum-input-value" id="minimum-input-value">
+                    </div>
+                    <div class="item" id="maximum-input-value-box">
+                      <label for="maximum-input-value">Valor máximo de Entrada</label>
+                      <input type="number" name="maximum-input-value" id="maximum-input-value">
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+                
+                <div id="targets-box" class="item-box">
+                  <fieldset>
+                    <legend class="item heading-item-group">Alvos</legend>
+                    <table id="targets-box">
+                      <tr class="target-row">
+                        <th class="first-col col"><label for="alvo1">Alvo 1</label></th>
+                        <td class="col"><input type="number" name="alvo1" id="alvo1"></td>
+                        <td class="col"><span class="feedback"></span></td>
+                      </tr>
+                      <tr class="target-row">
+                        <th class="first-col col"><label for="alvo2">Alvo 2</label></th>
+                        <td class="col"><input type="number" name="alvo2" id="alvo2"></td>
+                        <td class="col"><span class="feedback"></span></td>
+                      </tr>
+                      <tr class="target-row">
+                        <th class="first-col col"><label for="alvo1">Alvo 3</label></th>
+                        <td class="col"><input type="number" name="alvo3" id="alvo3"></td>
+                        <td class="col"><span class="feedback"></span></td>
+                      </tr>
+                      <tr class="target-row">
+                        <th class="first-col col"><label for="alvo4">Alvo 4</label></th>
+                        <td class="col"><input type="number" name="alvo4" id="alvo4"></td>
+                        <td class="col"><span class="feedback"></span></td>
+                      </tr>
+                    </table>
+                    <input type="button" value="Adicionar Alvo">
+                  </fieldset>
+                </div>
+  
+                <div id="stoploss-box" class="item-box">
+                  <label class="single-label" for="stoploss">Stoploss</label>
+                  <input type="text" name="stoploss" id="stoploss">
+                </div>
+                <div id="is-high-risk-box" class="item-box">
+                  <input type="checkbox" name="is-high-risk" id="is-high-risk">
+                  <label for="is-high-risk">Operação de alto risco</label>
+                </div>
+                <input type="button" value="Gerar Sinal">
+              </div>
+            </form>
+          </div>
+          <div class="tab-panel" id="tab-2">
+            <span>content 2</span>
+          </div>
+          <div class="tab-panel" id="tab-3">
+            <span>content 3</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="./js/jquery-ui.min.js"></script>
+  <script src = "./js/tabs.js"></script>
+  <script src="./js/autocomplete.js"></script>
+</body>
+</html>
