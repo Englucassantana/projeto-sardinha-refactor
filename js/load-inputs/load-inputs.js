@@ -21,16 +21,3 @@ function calculateMaximumInputPrice(pairPrice) {
   const tax = 0.05;
   return (pairPrice * (1 + tax)).toFixed(2)
 }
-
-$("#pair-input").autocomplete({
-  select: function (ui) {
-    const pairName = ui.item.value;
-    let url = `https://api.binance.com/api/v3/ticker/price?symbol=${pairName}`;
-    $.get(url, null, (data, textStatus) => {
-      if (textStatus) {
-        const pairData = data;
-        loadInputsValue(pairData.price);
-      }
-    });
-  }
-});
