@@ -98,6 +98,10 @@ body{
   padding-bottom: 18px;
 }
 
+.item-box-error{
+  background-color: #FFEBEE;
+}
+
 .item{
   padding-bottom: 6px;
 }
