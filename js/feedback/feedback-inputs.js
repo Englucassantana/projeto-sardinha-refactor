@@ -20,11 +20,11 @@ function checkErrorOnInputsValue() {
   return errorMessage;
 }
 
-function showInputsFeedback(event) {
+function showInputsFeedback() {
   const errorMessage = checkErrorOnInputsValue();
   const $intervalInput = $('#interval-input');
   const $feedback = $('#interval-input .feedback');
-  console.log($feedback);
+
   if(errorMessage){
     $feedback.text(errorMessage); 
     $feedback.addClass('feedback-error');
@@ -36,9 +36,9 @@ function showInputsFeedback(event) {
   }
 }
 
-$('#minimum-input-value').on('input',(event)=>{
-  showInputsFeedback(event);
+$('#minimum-input-value').on('input',()=>{
+  showInputsFeedback();
 })
-$('#maximum-input-value').on('input',(event)=>{
-  showInputsFeedback(event);
+$('#maximum-input-value').on('input',()=>{
+  showInputsFeedback();
 })
